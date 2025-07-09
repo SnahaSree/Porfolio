@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snaha's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Poppins&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --main-bg: #f9f1ff;
+      --card-bg: #fff;
+      --accent: #a29bfe;
+      --text: #2d3436;
+      --subtext: #636e72;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--main-bg);
+      color: var(--text);
+      padding: 30px;
+      overflow-x: hidden;
+    }
+
+    .cv-container {
+      max-width: 900px;
+      margin: auto;
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      animation: slideFadeIn 1.5s ease both;
+    }
+
+    @keyframes slideFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .profile-pic {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--accent);
+      box-shadow: 0 6px 16px rgba(162, 155, 254, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-pic img:hover {
+      transform: scale(1.08) rotate(2deg);
+      box-shadow: 0 10px 20px rgba(162, 155, 254, 0.6);
+    }
+
+    .header h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 3rem;
+      color: var(--accent);
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      color: var(--subtext);
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .section {
+      margin-top: 30px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .section h2 {
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      border-bottom: 2px dashed var(--accent);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .info-box {
+      margin: 15px 0;
+    }
+
+    .info-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: #6c5ce7;
+    }
+
+    .info-box p {
+      color: var(--subtext);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .skill {
+      background-color: var(--accent);
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      box-shadow: var(--shadow);
+      transition: 0.3s;
+      animation: popIn 0.5s ease;
+    }
+
+    .skill:hover {
+      background-color: #6c5ce7;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: var(--subtext);
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      .profile-pic img {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <div class="header">
+      <div class="profile-pic">
+        <img src="snaha.jpg" alt="Snaha Profile Pic">
+      </div>
+      <h1>Snaha Das Bonosree</h1>
+      <p>Software Engineering Student | Flutter Developer 💻 | Passionate 💙</p>
+    </div>
+
+    <div class="section">
+      <h2>🌼 About Me</h2>
+      <p>Hello! I'm a passionate and creative software engineering student who loves building apps and sites! I adore vibrant designs and try to make everything user-friendly and functional!</p>
+    </div>
+
+    <div class="section">
+      <h2>🎓 Education</h2>
+      <div class="info-box">
+        <h3>Completed High School </h3>
+        <p>Netrakona Govt. Girls High School, Netrakona, Bangladesh <br>in 2019</p>
+        <h3>Completed College</h3>
+        <p>Netrakona Govt. College, Netrakona, Bangladesh <br> in 2021</p>
+        <h3>BSc in Software Engineering</h3>
+        <p>Shahjalal University of Science & Technology, Sylhet, Bangladesh<br/>2022 - Present</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💻 Skills</h2>
+      <div class="skills">
+        <div class="skill">Flutter</div>
+        <div class="skill">Firebase</div>
+        <div class="skill">Dart</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">C/C++</div>
+        <div class="skill">GitHub</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🌸 Projects</h2>
+      <div class="info-box">
+        <h3>WeMeet - K-pop Community App</h3>
+        <p>A vibrant social app for K-pop lovers. Features include chat, posts, events, live interaction, and beautiful custom UI using Flutter and Firebase.</p>
+      </div>
+      <div class="info-box">
+        <h3>Animated To-Do List</h3>
+        <p>A stylish task manager with gradient buttons, pastel colors, and smooth animations using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="info-box">
+        <h3>Multiple animated Quiz system</h3>
+        <p>A vibrant UI with quiz system about your favorite k-pop groups</p>
+        </div>
+        <div class="info-box">
+        <h3>Snake Game project</h3>
+        <p>A animated, well-made vibrant snake game by using C++ and SDL2</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📞 Contact</h2>
+      <p>Email: snahadasbonosree@gmail.com<br/>
+         Phone: +8801918-261767<br/>
+         <a href="https://github.com/SnahaSree" target="_blank">Github: SnahaSree</a>
+      </p>
+    </div>
+
+    <div class="footer">
+      ✨ Thank you for visiting my CV! ✨
+    </div>
+  </div>
+
+</body>
+</html>
